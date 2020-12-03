@@ -4,12 +4,16 @@ import User.*;
 
 import java.util.List;
 
-public class UserManagement
+public class UserManager
 {
   public List<User> allUsers;
 
-  public UserManagement(List<User> allUsers){
+  public UserManager(List<User> allUsers){
     this.allUsers = allUsers;
+  }
+
+  public List<User> getAllUsers(){
+    return allUsers;
   }
 
   public void newProfessor(String name, String pswd){
@@ -18,6 +22,6 @@ public class UserManagement
   }
 
   public void newStudent(String name, String pswd){
-    Student student = new Student();
+    Student student = new Student(name, pswd);
   }
 }
